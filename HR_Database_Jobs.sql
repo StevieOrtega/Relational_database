@@ -34,7 +34,6 @@ CREATE TABLE `Jobs` (
 --
 -- Dumping data for table `Jobs`
 --
-#Inserting Tables
 LOCK TABLES `Jobs` WRITE;
 /*!40000 ALTER TABLE `Jobs` DISABLE KEYS */;
 INSERT INTO `Jobs` VALUES ('AC_ACCOUNT','Public Accountant',4200,9000),
@@ -56,6 +55,7 @@ INSERT INTO `Jobs` VALUES ('AC_ACCOUNT','Public Accountant',4200,9000),
                           ('SH_CLERK','Shipping Clerk',2500,5500),
                           ('ST_CLERK','Stock Clerk',2008,5000),
                           ('ST_MAN','Stock Manager',5500,8500);
+                          
 /*!40000 ALTER TABLE `Jobs` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
