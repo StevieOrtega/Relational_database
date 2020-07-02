@@ -34,28 +34,10 @@ CREATE TABLE `Jobs` (
 --
 -- Dumping data for table `Jobs`
 --
+
 LOCK TABLES `Jobs` WRITE;
 /*!40000 ALTER TABLE `Jobs` DISABLE KEYS */;
-INSERT INTO `Jobs` VALUES ('AC_ACCOUNT','Public Accountant',4200,9000),
-                          ('AC_MGR','Accounting Manager',8200,16000),
-                          ('AD_ASST','Administration Assistant',3000,6000),
-                          ('AD_PRES','President',20080,40000),
-                          ('AD_VP','Administration Vice President',15000,30000),
-                          ('FI_ACCOUNT','Accountant',4200,9000),
-                          ('FI_MGR','Finance Manager',8200,16000),
-                          ('HR_REP','Human Resources Representive',4000,9000),
-                          ('IT_PROG','Programmer',4000,10000),
-                          ('MK_MAN','Marketing Manager',9000,15000),
-                          ('MK_REP','Marketing Representative',4000,9000),
-                          ('PR_REP','Public Relations Representative',4500,10500),
-                          ('PU_CLERK','Purchasing Clerk',2500,5500),
-                          ('PU_MAN','Purchasing Clerk',8000,15000),
-                          ('SA_MAN','Sales Manager',10000,20080),
-                          ('SA_REP','Sales Reprentative',6000,12008),
-                          ('SH_CLERK','Shipping Clerk',2500,5500),
-                          ('ST_CLERK','Stock Clerk',2008,5000),
-                          ('ST_MAN','Stock Manager',5500,8500);
-                          
+INSERT INTO `Jobs` VALUES ('AC_ACCOUNT','Public Accountant',4200,9000),('AC_MGR','Accounting Manager',8200,16000),('AD_ASST','Administration Assistant',3000,6000),('AD_PRES','President',20080,40000),('AD_VP','Administration Vice President',15000,30000),('FI_ACCOUNT','Accountant',4200,9000),('FI_MGR','Finance Manager',8200,16000),('HR_REP','Human Resources Representive',4000,9000),('IT_PROG','Programmer',4000,10000),('MK_MAN','Marketing Manager',9000,15000),('MK_REP','Marketing Representative',4000,9000),('PR_REP','Public Relations Representative',4500,10500),('PU_CLERK','Purchasing Clerk',2500,5500),('PU_MAN','Purchasing Clerk',8000,15000),('SA_MAN','Sales Manager',10000,20080),('SA_REP','Sales Reprentative',6000,12008),('SH_CLERK','Shipping Clerk',2500,5500),('ST_CLERK','Stock Clerk',2008,5000),('ST_MAN','Stock Manager',5500,8500);
 /*!40000 ALTER TABLE `Jobs` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -68,4 +50,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-23 11:29:43
+-- Dump completed on 2020-07-02 12:41:31
