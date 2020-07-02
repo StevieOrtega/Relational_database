@@ -16,31 +16,39 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `Departments`
+-- Table structure for table `Employees`
 --
 
-DROP TABLE IF EXISTS `Departments`;
+DROP TABLE IF EXISTS `Employees`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `Departments` (
-  `department_id` int NOT NULL,
-  `department_name` varchar(45) DEFAULT NULL,
-  `manager_id` smallint DEFAULT NULL,
-  `location_id` smallint DEFAULT NULL,
-  PRIMARY KEY (`department_id`),
-  KEY `departments_location_id_idx` (`location_id`),
-  CONSTRAINT `departments_location_id` FOREIGN KEY (`location_id`) REFERENCES `Locations` (`location_id`)
+CREATE TABLE `Employees` (
+  `employee_id` int NOT NULL,
+  `first_name` varchar(45) DEFAULT NULL,
+  `last_name` varchar(45) DEFAULT NULL,
+  `email` varchar(45) DEFAULT NULL,
+  `phone_number` int DEFAULT NULL,
+  `hire_date` date DEFAULT NULL,
+  `job_id` varchar(10) DEFAULT NULL,
+  `salary` int DEFAULT NULL,
+  `commission_pct` int DEFAULT NULL,
+  `manager_id` int DEFAULT NULL,
+  `department_id` int DEFAULT NULL,
+  PRIMARY KEY (`employee_id`),
+  KEY `employees_job_id_idx` (`job_id`),
+  KEY `employees_department_id_idx` (`department_id`),
+  CONSTRAINT `employees_department_id` FOREIGN KEY (`department_id`) REFERENCES `Departments` (`department_id`),
+  CONSTRAINT `employees_job_id` FOREIGN KEY (`job_id`) REFERENCES `Jobs` (`job_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `Departments`
+-- Dumping data for table `Employees`
 --
 
-LOCK TABLES `Departments` WRITE;
-/*!40000 ALTER TABLE `Departments` DISABLE KEYS */;
-INSERT INTO `Departments` VALUES (10,'Administration',200,1700),(20,'Marketing',201,1800),(30,'Purchasing',114,1700),(40,'Human Resources',203,2400),(50,'Shipping',121,1500),(60,'IT',103,1400),(70,'Public Relations',204,2700),(80,'Sales',145,2500),(90,'Executive',100,1700),(100,'Finance',108,1700),(110,'Accounting',205,1700),(120,'Treasury',NULL,1700),(130,'Corporate Tax',NULL,1700),(140,'Control and Credit',NULL,1700),(150,'Shareholder Services',NULL,1700),(160,'Benefits',NULL,1700),(170,'Manufacturing',NULL,1700),(180,'Construction',NULL,1700),(190,'Contracting',NULL,1700),(200,'Operations',NULL,1700),(210,'IT Support',NULL,1700),(220,'NOC',NULL,1700),(230,'IT Helpdesk',NULL,1700),(240,'Goverment Sales',NULL,1700),(250,'Retail Sales',NULL,1700),(260,'Recruiting',NULL,1700),(270,'Payroll',NULL,1700);
-/*!40000 ALTER TABLE `Departments` ENABLE KEYS */;
+LOCK TABLES `Employees` WRITE;
+/*!40000 ALTER TABLE `Employees` DISABLE KEYS */;
+/*!40000 ALTER TABLE `Employees` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
